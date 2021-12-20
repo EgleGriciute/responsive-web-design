@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grey: #4d4e53;
+    --lightGrey: #f7f7f7;
+    --dark: #1d1e1f;
+    --transition: 0.3s all ease-out;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: lighter;
+    font-size: 0.75rem;
+}
+
+/* header */
+
+.header-title {
+    text-align: center;
+}
+
+.header-title h1 {
+    font-weight: lighter;
+    padding: 1rem;
+}
+
+h1 {
+    white-space: nowrap;
+    font-size: 1.4rem;
+}
+
+/* documentation menu */
+
+.doc-menu {
+    border: 2px solid var(--grey);
+    overflow-y: scroll;
+    height: 200px;
+    width: 100%;
+}
+
+.doc-menu a {
+    text-decoration: none;
+    color: var(--grey);
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.doc-menu li {
+    border-bottom: 1px solid var(--grey);
+    width: 100%;
+    padding: 0.5rem 1.5rem;
+}
+
+.doc-menu li:hover {
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.doc-content {
+    margin: 2rem;
+}
+
+/* main */
+
+/* content section */
+
+.doc-content__title > h2 {
+    font-weight: lighter;
+    margin-bottom: 1.5rem;
+}
+
+.description-text {
+    color: var(--grey);
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.description-text:nth-child(2) {
+    margin-top :1rem;
+}
+
+.list-text {
+    margin-top: 1rem;
+    color: var(--grey);
+}
+
+ul {
+    color: var(--grey);
+}
+
+.description-list {
+    margin-left: 3rem;
+}
+
+.data-types__list {
+    margin-left: 4rem;
+    margin-top: 1rem;
+    color: var(--grey);
+    line-height: 2rem;
+}
+
+.description-code {
+    color: var(--dark);
+    margin: 1rem 0 0 3rem;
+    line-height: 1.5rem;
+    background-color: var(--lightGrey);
+    padding: 1rem;
+    font-family: monospace;
+}
+
+/* iPad Pro */
+
+@media only screen and (min-width: 1024px) {
+    
+    .doc-menu {
+        width: 100%;
+        height: 1000px;
+        /* overflow-y:auto; */
+        border: none;
+    }
+
+    body {
+        display: flex;
+        justify-content: space-between;
+        margin-left: 230px;
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        border-right: 2px solid var(--grey);
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+
+    .doc-menu li:first-child {
+        border-top: 1px solid var(--grey);
+    }
+
+    .doc-menu li:last-child {
+        border-bottom: none;
+    }
+}

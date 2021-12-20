@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark: rgb(0, 0, 0);
+    --yellow: #f1c40f;
+    --grey: #DDD;
+    --darkerGrey: rgb(77, 77, 77);
+    --bodyColor: #eee;
+    --orange: darkorange;
+}
+
+body {
+    background-color: var(--bodyColor);
+    overflow-x: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    margin: 0.5rem;
+}
+
+
+/* iPhone X */
+
+
+/* header */
+
+header {
+    position: fixed;
+    top: 0;
+    background-color: var(--bodyColor);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#header-img {
+    width: 300px;
+    height: 30px;
+    margin: 1rem 1rem 0 1rem;
+}
+
+ul,
+form,
+.service-description {
+    text-align: center;
+}
+
+span {
+    display: none;
+    color: var(--orange);
+    font-size: 3rem;
+    padding: 3rem;
+}
+
+a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--dark);
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+li {
+    padding: 0.1rem 0;
+    font-size: 1.1rem;
+}
+
+
+/*  main */
+
+main {
+    margin-top: 7rem;
+}
+
+#form h1 {
+    font-size: x-large;
+    font-weight: 600;
+    padding: 1rem 0;
+}
+
+#email {
+    height: 30px;
+    width: 280px;
+    padding-left: 0.5rem;
+}
+
+#submit,
+button {
+    background-color: var(--yellow);
+    margin: 1rem 0;
+    text-transform: uppercase;
+    border: none;
+    font-weight: 900;
+    padding: 0.2rem 0.4rem;
+    cursor: pointer;
+}
+
+
+/* sections */
+
+.service-description {
+    padding: 2rem 0;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#video {
+    padding: 3rem 0;
+}
+
+.card {
+    border: 1px solid black;
+    height: 100%;
+    text-align: center;
+    width: 300px;
+    margin: 0.3rem 0;
+    border-radius: 3px;
+}
+
+.card-title,
+button {
+    text-transform: uppercase;
+}
+
+h3 {
+    background-color: var(--grey);
+    padding: 1rem 0;
+    font-weight: 300;
+}
+
+h2 {
+    padding: 1rem 0;
+}
+
+p {
+    padding: 0.3rem;
+}
+
+button {
+    font-weight: 400;
+    padding: 0.8rem 1.3rem;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* footer */
+
+footer {
+    background-color: var(--grey);
+}
+
+.contacts {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.contacts-list {
+    display: flex;
+}
+
+.contacts-list li {
+    padding: 1.5rem 1rem 0.2rem;
+}
+
+.copyright {
+    color: var(--darkerGrey);
+    padding: 0 1rem 1rem 0;
+}
+
+
+/* iPad */
+
+@media only screen and (min-width:768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+    #nav-bar>ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #nav-bar>ul>li {
+        margin-right: 3rem;
+    }
+    main {
+        margin-top: 5rem;
+    }
+    span {
+        display: block;
+    }
+    .service-description {
+        display: flex;
+        justify-content: flex-start;
+        text-align: unset;
+        align-items: center;
+        padding: 0;
+    }
+    .description-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    #submit {
+        margin-bottom: 4rem;
+    }
+    .description-text>h1 {
+        margin-left: 0.3rem;
+    }
+    #video {
+        width: 583px;
+        height: 415px;
+    }
+}
+
+
+/* iPad Pro */
+
+@media only screen and (min-width:1024px) {
+    .article-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    article {
+        padding-left: 1.5rem;
+    }
+    body {
+        max-width: 1200px;
+    }
+}

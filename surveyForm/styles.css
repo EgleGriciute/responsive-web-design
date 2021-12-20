@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: rgb(255, 255, 255);
+    --darkerGrey: rgb(63, 59, 59);
+    --mainViolet: rgba(94, 20, 84, 0.8);
+    --mainYellow: rgb(255, 230, 0);
+    --textShadow: 0.5px 0.5px 1px var(--darkerGrey);
+    --shadow: 0 0 10px var(--white);
+}
+
+body {
+    color: var(--white);
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* header title */
+
+.title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 2.5rem;
+    color: var(--mainViolet);
+}
+
+#description {
+    margin: 0.5rem 0 1.5rem 0;
+    font-style: italic;
+}
+
+#description {
+    text-shadow: var(--textShadow);
+}
+
+
+/* main */
+
+main {
+    background: linear-gradient(rgba(255, 255, 255, .5), rgba(255, 255, 255, .3)), url(./assets/images/background-img.jpg) fixed 25% 75%;
+    max-width: 100%;
+    background-size: cover;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: var(--mainViolet);
+    border-radius: 5px;
+}
+
+#survey-form {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+    margin-top: 1rem;
+}
+
+label {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+}
+
+input,
+select {
+    height: 35px;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    transition: all 0.3s ease-in;
+    border: none;
+}
+
+input {
+    padding: 1rem;
+}
+
+select {
+    padding: 0.3rem;
+}
+
+::placeholder {
+    color: var(--darkerGrey);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+    outline: none !important;
+    border: 0.5px solid var(--white);
+    box-shadow: var(--shadow);
+}
+
+
+/* radio buttons */
+
+input[type="radio"],
+input[type="checkbox"] {
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom appearance */
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    padding: 6px;
+    /* background-color only for content */
+    background-clip: content-box;
+    background-color: var(--mainViolet);
+    border-radius: 50%;
+}
+
+
+/* appearance for checked */
+
+input[type="radio"]:checked,
+input[type="checkbox"]:checked {
+    background-color: var(--mainYellow);
+}
+
+.radio label {
+    display: flex;
+    align-items: center;
+    margin-bottom: -2rem;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 0.5rem;
+    transform: scale(1.5);
+    border-radius: 50%;
+}
+
+input[type="radio"] {
+    margin-top: 0.2rem;
+}
+
+
+/* select */
+
+label[for="second-select"] {
+    margin-top: 4rem;
+}
+
+span {
+    font-size: 0.9rem;
+}
+
+
+/* checkbox */
+
+.checkbox>label {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+label[for="checkbox"] input {
+    margin-bottom: 0.3rem;
+}
+
+label[for="checkbox-title"] {
+    margin-bottom: 1rem;
+}
+
+
+/* textarea */
+
+textarea {
+    min-height: 120px;
+    width: 95%;
+    padding: 0.625rem;
+    resize: vertical;
+    margin-top: 0.5rem;
+}
+
+
+/* submit button */
+
+.submit-button {
+    margin-top: 2rem;
+    background-color: var(--mainYellow);
+    border: none;
+    width: 95%;
+    height: 40px;
+    color: var(--white);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+    margin-bottom: 4rem;
+    letter-spacing: 0.2rem;
+}
+
+@media only screen and (min-width: 580px) {
+    .container {
+        width: 70%;
+    }
+    main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-bottom: 4rem;
+    }
+}
